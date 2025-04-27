@@ -112,6 +112,7 @@ def heart_disease():
     if st.sidebar.button("Go!"):
         df=input_data
         st.write(df)
+        model = model_heart_disease()
         prediction=model_loaded.predict(df)
         st.write("Hasil prediksi:")
         result=["No Heart Disease" if prediction==0 else "Yes Heart Disease"]
